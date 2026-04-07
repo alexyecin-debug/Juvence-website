@@ -1,0 +1,8 @@
+{
+  "name": "juvence-website",
+  "version": "1.0.0",
+  "description": "Juvence agency website",
+  "scripts": {
+    "start": "npx serve -s . -l $PORT"
+  }
+}
