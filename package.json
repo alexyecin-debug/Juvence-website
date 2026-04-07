@@ -2,7 +2,10 @@
   "name": "juvence-website",
   "version": "1.0.0",
   "description": "Juvence agency website",
+  "dependencies": {
+    "serve": "^14.2.0"
+  },
   "scripts": {
-    "start": "npx serve -s . -l $PORT"
+    "start": "serve . -l ${PORT:-3000}"
   }
 }
