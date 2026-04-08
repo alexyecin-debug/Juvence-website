@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "juvence-site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3000", "C:\\Users\\alexy\\OneDrive\\Desktop\\AGENCY\\website"],
+      "port": 3000
+    }
+  ]
+}

@@ -294,35 +294,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---------- Contact Form ----------
   const form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
+  if (form && form.getAttribute('action')) {
+    // Formspree handles submission — just show feedback
+    form.addEventListener('submit', () => {
       const btn = form.querySelector('.btn');
-      const originalText = btn.textContent;
-
-      // Success animation
-      btn.textContent = 'Sent!';
+      btn.textContent = 'Envoi...';
       btn.style.background = '#10B981';
-      btn.style.transform = 'scale(1.05)';
-      setTimeout(() => { btn.style.transform = ''; }, 200);
-
-      // Animate form fields out
-      form.querySelectorAll('.form-group').forEach((group, i) => {
-        setTimeout(() => {
-          group.style.opacity = '0.5';
-          group.style.transform = 'translateY(-5px)';
-        }, i * 50);
-      });
-
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        form.reset();
-        form.querySelectorAll('.form-group').forEach(group => {
-          group.style.opacity = '';
-          group.style.transform = '';
-        });
-      }, 2500);
     });
 
     // Focus glow on inputs
